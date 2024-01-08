@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>urdfdom_headers</name>
+  <version>3.0.2</version>
+  <description>Header files for linkage supporting urdfdom_headers</description>
+
+  <maintainer email="clalancette@openrobotics.org">Chris Lalancette</maintainer>
+  <maintainer email="shane@openrobotics.org">Shane Loretz</maintainer>
+  <maintainer email="scpeters@openrobotics.org">Steve Peters</maintainer>
+  <maintainer email="placeholder@place.holder">Peter Mnev</maintainer>
+
+
+  <license>BSD</license>
+
+  <author>Ioan Sucan</author>
+  <author>John Hsu</author>
+  <author email="steven@osrfoundation.org">Steven! Ragnarök</author>
+  <author>Wim Meeussen</author>
+
+  
+  <buildtool_depend>cmake</buildtool_depend>
+
+ 
+  <export>
+    <build_type>cmake</build_type>
+  </export>
+</package>
