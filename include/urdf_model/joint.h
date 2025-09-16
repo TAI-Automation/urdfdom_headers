@@ -163,6 +163,27 @@ public:
 };
 
 
+class JointLinkage
+{
+public:
+  JointLinkage() { this->clear(); };
+  
+  double base_width;
+  double leg_length;
+  double top_width;
+  std::string parent_name;
+
+  void clear()
+  {
+    base_width = 0.0;
+    leg_length = 0.0;
+    top_width = 0.0;
+    parent_name.clear();
+  };
+};
+
+
+
 class Joint
 {
 public:
@@ -210,6 +231,10 @@ public:
   /// Option to Mimic another Joint
   JointMimicSharedPtr mimic;
 
+
+  /// Option to Link to another Joint
+  JointLinkageSharedPtr linkage;
+
   void clear()
   {
     this->axis.clear();
@@ -220,6 +245,7 @@ public:
     this->limits.reset();
     this->safety.reset();
     this->calibration.reset();
+    this->linkage.reset();
     this->mimic.reset();
     this->type = UNKNOWN;
   };
