@@ -182,6 +182,23 @@ public:
   };
 };
 
+class JointLinkageNew
+{
+public:
+  JointLinkageNew() { this->clear(); };
+  
+  std::string function_str;
+  std::string params_str;
+  std::string parent_name;
+
+  void clear()
+  {
+    function_str.clear();
+    parent_name.clear();
+    params_str.clear();
+  };
+};
+
 
 
 class Joint
@@ -234,6 +251,8 @@ public:
 
   /// Option to Link to another Joint
   JointLinkageSharedPtr linkage;
+  
+  JointLinkageNewSharedPtr linkage_new;
 
   void clear()
   {
@@ -246,6 +265,7 @@ public:
     this->safety.reset();
     this->calibration.reset();
     this->linkage.reset();
+    this->linkage_new.reset();
     this->mimic.reset();
     this->type = UNKNOWN;
   };
